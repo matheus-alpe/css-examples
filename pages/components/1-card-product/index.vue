@@ -1,0 +1,3 @@
+<template>
+  <FirstCardProduct />
+</template>
