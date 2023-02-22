@@ -1,2 +1,9 @@
 @import 'colors';
 @import 'root';
+
+body {
+  background-color: var(--bg);
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+}
