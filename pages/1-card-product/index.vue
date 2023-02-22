@@ -1,3 +1,5 @@
 <template>
-  <FirstCardProduct />
+  <NuxtLayout name="header">
+    <FirstCardProduct />
+  </NuxtLayout>
 </template>

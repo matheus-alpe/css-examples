@@ -1,5 +1,3 @@
-<script lang="ts" setup></script>
-
 <template>
   <nav>
     <ul>
@@ -9,3 +7,11 @@
     </ul>
   </nav>
 </template>
+
+<style lang="scss">
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+</style>

@@ -11,12 +11,7 @@
 
       <h2 class="card__content-price">$40.<small>99</small></h2>
 
-      <a
-        href="#"
-        class="card__content-buy"
-      >
-        Buy Now
-      </a>
+      <a class="card__content-buy"> Buy Now </a>
     </div>
   </div>
 </template>

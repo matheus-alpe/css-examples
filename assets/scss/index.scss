@@ -6,4 +6,23 @@ body {
   min-height: 100svh;
   display: grid;
   place-items: center;
+  padding: 0 0.5rem;
+}
+
+a[href] {
+  --offset-outline: 2px;
+  --border: var(--offset-outline) solid var(--primary);
+  display: inline-block;
+  padding: 0.4rem 0.6rem;
+  color: var(--primary);
+  border-radius: 5px;
+  border: var(--border);
+  outline: var(--border);
+  outline-offset: calc(0px - var(--offset-outline));
+  transition: outline-offset 200ms ease;
+
+  &:hover {
+    outline-style: dashed;
+    outline-offset: calc(0px - var(--offset-outline) * 3);
+  }
 }
