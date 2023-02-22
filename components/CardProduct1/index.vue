@@ -17,5 +17,5 @@
 </template>
 
 <style lang="scss" scoped>
-@import './FirstCardProduct.scss';
+@import './CardProduct1.scss';
 </style>

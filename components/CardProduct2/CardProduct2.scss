@@ -11,14 +11,6 @@
   -webkit-transition: 0.15s ease-in;
   transition: 0.15s ease-in;
 
-  &:hover,
-  &:focus-within {
-    -webkit-box-shadow: 0 0 0 2px #16c79a, 0 10px 60px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 0 2px #16c79a, 0 10px 60px 0 rgba(0, 0, 0, 0.1);
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-  }
-
   .card__image {
     border-radius: 10px;
     overflow: hidden;
@@ -140,5 +132,13 @@
       height: 1em;
       margin-right: 0.25em;
     }
+  }
+
+  &:hover,
+  &:focus-within {
+    -webkit-box-shadow: 0 0 0 2px #16c79a, 0 10px 60px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 2px #16c79a, 0 10px 60px 0 rgba(0, 0, 0, 0.1);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
   }
 }

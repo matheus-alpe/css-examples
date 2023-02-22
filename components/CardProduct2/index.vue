@@ -1,5 +1,5 @@
 <template>
-  <article class="card">
+  <div class="card">
     <figure class="card__image">
       <img
         src="https://images.unsplash.com/photo-1494253109108-2e30c049369b?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyNDcwMTUwOQ&ixlib=rb-1.2.1&q=85"
@@ -26,9 +26,9 @@
         Jul 26, 2019
       </div>
     </div>
-  </article>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-@import './SecondaCardProduct.scss';
+@import './CardProduct2.scss';
 </style>

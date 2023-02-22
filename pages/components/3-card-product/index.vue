@@ -1,3 +1,3 @@
 <template>
-  <CardProduct1 />
+  <CardProduct3 />
 </template>
