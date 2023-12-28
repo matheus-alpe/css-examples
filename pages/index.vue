@@ -16,6 +16,10 @@ const links = ref([
     url: '4-animated-border',
     name: '4 - Animated Border',
   },
+  {
+    url: '5-animated-button',
+    name: '5 - Animated Button',
+  },
 ])
 </script>
 

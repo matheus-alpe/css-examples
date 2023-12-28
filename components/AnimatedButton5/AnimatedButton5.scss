@@ -1,0 +1,95 @@
+.button {
+    --border-radius: 1.25rem;
+    cursor: pointer;
+    font-family: system-ui;
+    font-size: 2rem;
+    font-weight: 700;
+    color: hsl(320, 40%, 40%);
+    background-color: hsl(349 100% 95%);
+    padding: 0.35em 1em;
+    border: 0;
+    border-radius: var(--border-radius);
+
+    &.glow-effect {
+        --glow-blur-clr: #fff;
+        --glow-blur-size: 5px;
+        --glow-line-clr: #fff;
+        --glow-line-thickness: 2px;
+        --glow-line-length: 25px;
+        --glow-offset: 0px;
+        --glow-animation-speed: 1200ms;
+
+        --container-offset: 100px;
+        position: relative;
+
+        &[data-glow-animation="false"] {
+            --glow-line-length: 0;
+        }
+
+        &[data-glow-offset="true"] {
+            --glow-offset: 10px;
+        }
+
+        &:is(:hover, :focus) {
+            .glow {
+                animation: glow-visibility ease-in-out var(--glow-animation-speed);
+
+                &__blur,
+                &__line {
+                    stroke-dashoffset: -80px;
+                    transition:
+                        stroke-dashoffset var(--glow-animation-speed) ease-in;
+                }
+            }
+        }
+    }
+
+    .glow {
+        opacity: 0; // default value to start animation
+        pointer-events: none;
+        position: absolute;
+        inset: calc(var(--container-offset) / -2);
+        width: calc(100% + var(--container-offset) + var(--glow-offset));
+        height: calc(100% + var(--container-offset) + var(--glow-offset));
+
+        &__blur,
+        &__line {
+            width: calc(100% - var(--container-offset));
+            height: calc(100% - var(--container-offset));
+
+            /* SVG attributes */
+            x: calc(var(--container-offset) / 2 - calc(var(--glow-offset) / 2));
+            y: calc(var(--container-offset) / 2 - calc(var(--glow-offset) / 2));
+            rx: calc(var(--border-radius) + (var(--glow-offset) / 4));
+            fill: transparent;
+            stroke: black;
+            stroke-width: 5px;
+            stroke-dasharray: var(--glow-line-length) calc(50px - var(--glow-line-length));
+        }
+
+        &__blur {
+            stroke: var(--glow-blur-clr);
+            stroke-width: var(--glow-blur-size);
+            filter: blur(var(--glow-blur-size));
+        }
+
+        &__line {
+            stroke: var(--glow-line-clr);
+            stroke-width: var(--glow-line-thickness);
+        }
+    }
+
+}
+
+@keyframes glow-visibility {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    25%,
+    75% {
+        opacity: 1;
+    }
+}
