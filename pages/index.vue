@@ -12,6 +12,10 @@ const links = ref([
     url: '3-card-product',
     name: '3 - Card Product',
   },
+  {
+    url: '4-animated-border',
+    name: '4 - Animated Border',
+  },
 ])
 </script>
 
