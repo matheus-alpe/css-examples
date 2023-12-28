@@ -1,10 +1,6 @@
 <template>
   <header class="header">
-    <NuxtLink
-      class="cta-back"
-      to="/"
-      >Back</NuxtLink
-    >
+    <NuxtLink class="cta-back" to="/">Back</NuxtLink>
   </header>
   <slot />
 </template>
